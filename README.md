@@ -27,17 +27,27 @@ For example, the above might output:
 
 Breaking that down:
 
-cloudflare.com,           Origin server contacted
-www.cloudflare.com,       Host header sent
-t,                        t if the origin server name resolved
-t,                        t if a GET / with no Via header worked
-t,                        t if a GET / with a Via header worked
-2038,                     Size in bytes of the response to GET / with no Via
-2038,                     Size in bytes of the response to GET / with Via
-gzip,                     Content-Encoding in response with no Via header
-gzip,                     Content-Encoding in response with a Via header
-cloudflare-nginx,         Server in response with no Via header
-cloudflare-nginx          Server in response with a Via header
+`cloudflare.com,` Origin server contacted
+
+`www.cloudflare.com,` Host header sent
+
+`t,` t if the origin server name resolved
+
+`t,` t if a GET / with no Via header worked
+
+`t,` t if a GET / with a Via header worked
+
+`2038,` Size in bytes of the response to GET / with no Via
+
+`2038,` Size in bytes of the response to GET / with Via
+
+`gzip,` Content-Encoding in response with no Via header
+
+`gzip,` Content-Encoding in response with a Via header
+
+`cloudflare-nginx,` Server in response with no Via header
+
+`cloudflare-nginx` Server in response with a Via header
 
 # Options
 
